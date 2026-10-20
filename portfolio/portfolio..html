@@ -1,0 +1,1420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pushkar Singh Bharadwaj | Portfolio</title>
+<meta name="description" content="Portfolio of Pushkar Singh Bharadwaj, B.Tech Computer Science student building web projects.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+<style>
+
+:root {
+  --paper: #080d20;
+  --ink: #eaf0ff;
+  --muted: #a4b3d4;
+  --line: #25345c;
+  --cobalt: #526dff;
+  --sun: #ffd166;
+  --pink: #e879f9;
+  --card: #111a33;
+  --display: 'Bricolage Grotesque', 'Segoe UI', Arial, sans-serif;
+  --body: 'Figtree', 'Segoe UI', Arial, sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1120px;
+  margin: auto;
+}
+
+/* Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(238, 241, 247, .88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+nav {
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  font-style: normal;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--cobalt);
+  color: #fff;
+  font-size: 14px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav ul a {
+  display: block;
+  color: var(--muted);
+  padding: 7px 15px;
+  border-radius: 999px;
+  transition: background .2s, color .2s;
+}
+
+nav ul a:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* Hero section */
+.hero-bg {
+  background-image: radial-gradient(#c3cbe0 1.4px, transparent 1.4px);
+  background-size: 26px 26px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 0 100px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.pill b {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, .25);
+}
+
+.hero h1 {
+  margin-top: 26px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(46px, 7.2vw, 96px);
+  line-height: .96;
+  letter-spacing: -.04em;
+}
+
+.hero h1 em {
+  font-style: normal;
+  position: relative;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.hero h1 em::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: .04em;
+  height: .34em;
+  background: var(--sun);
+  z-index: -1;
+  border-radius: 6px;
+  transform: rotate(-1.2deg);
+}
+
+.lead {
+  margin-top: 28px;
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.cta {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid var(--ink);
+  background: var(--card);
+  transition: transform .2s, box-shadow .2s, background .2s;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.btn.primary {
+  background: var(--cobalt);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+/* Profile photo */
+.photo {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 390px);
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  inset: 24px -24px -24px 24px;
+  background: var(--cobalt);
+  border-radius: 200px 200px 28px 28px;
+  border: 3px solid var(--ink);
+}
+
+.photo::after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: var(--pink);
+  border: 3px solid var(--ink);
+  top: -18px;
+  right: -30px;
+  z-index: 0;
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  border-radius: 200px 200px 28px 28px;
+  overflow: hidden;
+  background: var(--sun);
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--ink);
+}
+
+.frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame .initials {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 100px;
+}
+
+.sticker {
+  position: absolute;
+  z-index: 2;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.sticker.a {
+  left: -26px;
+  bottom: 70px;
+  transform: rotate(-5deg);
+}
+
+.sticker.b {
+  right: -34px;
+  bottom: -4px;
+  transform: rotate(4deg);
+  background: var(--sun);
+}
+
+.sticker small {
+  display: block;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+/* Moving skills banner */
+.marquee {
+  background: var(--ink);
+  color: #fff;
+  border-block: 3px solid var(--ink);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.track {
+  display: inline-flex;
+  gap: 46px;
+  padding: 18px 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 28px;
+  animation: slide 28s linear infinite;
+}
+
+.track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.track span::after {
+  content: "✦";
+  color: var(--sun);
+  font-size: 22px;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* General sections */
+section {
+  padding: 100px 0;
+}
+
+h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(34px, 4.8vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -.03em;
+  max-width: 18ch;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+}
+
+.about p {
+  color: var(--muted);
+  font-size: 19px;
+  max-width: 60ch;
+}
+
+.about p + p {
+  margin-top: 18px;
+}
+
+.about strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.facts {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.fact {
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.fact b {
+  display: block;
+  font-family: var(--display);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.fact span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Skills */
+.skills {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.group {
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 5px 5px 0 var(--ink);
+  transition: transform .2s;
+}
+
+.group:hover {
+  transform: translateY(-4px);
+}
+
+.group:nth-child(1) {
+  background: #e4e9ff;
+}
+
+.group:nth-child(2) {
+  background: #fff3c4;
+}
+
+.group:nth-child(3) {
+  background: #ffe0ef;
+}
+
+.group h3 {
+  font-family: var(--display);
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Projects */
+.projects {
+  margin-top: 48px;
+  display: grid;
+  gap: 26px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0 var(--ink);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.project:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--cobalt);
+}
+
+.preview {
+  background: var(--cobalt);
+  padding: 28px;
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+}
+
+.preview.alt {
+  background: var(--pink);
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: 240px;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.win {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.win .bar {
+  display: flex;
+  gap: 6px;
+  padding: 9px 12px;
+  border-bottom: 2px solid var(--ink);
+  background: var(--paper);
+}
+
+.win .bar i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ink);
+  opacity: .3;
+}
+
+.win .body {
+  padding: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.win .body u {
+  display: block;
+  height: 70px;
+  border-radius: 8px;
+  background: var(--sun);
+  border: 2px solid var(--ink);
+}
+
+.win .body u:nth-child(2) {
+  background: #e4e9ff;
+}
+
+.win .body u:nth-child(3) {
+  background: #ffe0ef;
+}
+
+.win .body s {
+  grid-column: 1 / -1;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--line);
+}
+
+.win .body s.short {
+  width: 60%;
+}
+
+.win .hero-mini {
+  grid-column: 1 / -1;
+  height: 54px;
+  border-radius: 8px;
+  background: var(--ink);
+}
+
+.info {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.info h3 {
+  font-family: var(--display);
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.info p {
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--sun);
+  border: 2px solid var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Project links */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.go {
+  display: inline-block;
+  width: fit-content;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color .2s;
+}
+
+.go:hover {
+  color: var(--cobalt);
+}
+
+/* Education */
+.edu {
+  margin-top: 60px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 26px;
+  padding: 42px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.edu .when {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--sun);
+}
+
+.edu h3 {
+  font-family: var(--display);
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.edu p {
+  color: #b9c0da;
+  margin-top: 6px;
+}
+
+/* Contact */
+.contact {
+  background: var(--cobalt);
+  color: #fff;
+  border-top: 3px solid var(--ink);
+}
+
+.contact h2 {
+  max-width: 13ch;
+  font-size: clamp(42px, 7vw, 92px);
+}
+
+.contact p {
+  margin-top: 20px;
+  font-size: 19px;
+  color: #dfe4ff;
+  max-width: 44ch;
+}
+
+.links {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contact .btn {
+  color: var(--ink);
+  border-color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.contact .btn.primary {
+  background: var(--sun);
+  color: var(--ink);
+}
+
+.contact .btn:hover {
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+/* Footer */
+footer {
+  background: var(--ink);
+  color: #9aa3c4;
+  padding: 26px 0;
+  font-size: 14px;
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .hero > * {
+    animation: rise .8s cubic-bezier(.2, .7, .2, 1) both;
+  }
+
+  .hero .photo {
+    animation-delay: .15s;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 80px;
+    padding: 50px 0 90px;
+  }
+
+  .photo {
+    width: min(76%, 340px);
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .preview {
+    min-height: 220px;
+  }
+
+  .edu {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 30px;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  nav ul {
+    gap: 2px;
+    font-size: 14px;
+  }
+
+  nav ul a {
+    padding: 6px 10px;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .sticker.a {
+    left: -10px;
+  }
+
+  .sticker.b {
+    right: -10px;
+  }
+
+  .track {
+    font-size: 22px;
+  }
+
+  .info {
+    padding: 26px;
+  }
+
+  .info h3 {
+    font-size: 28px;
+  }
+}
+
+/* ===== DARK THEME OVERRIDES ===== */
+
+body {
+  background: #080d20;
+  color: #eaf0ff;
+}
+
+header {
+  background: rgba(8, 13, 32, 0.92);
+  border-bottom: 1px solid #25345c;
+}
+
+.hero-bg {
+  background-color: #080d20;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(82, 109, 255, .16), transparent 32%),
+    radial-gradient(circle at 85% 60%, rgba(232, 121, 249, .12), transparent 30%),
+    radial-gradient(#26345c 1px, transparent 1px);
+  background-size: auto, auto, 26px 26px;
+}
+
+.pill,
+.btn,
+.fact,
+.chip {
+  background: #111a33;
+  color: #eaf0ff;
+  border-color: #34466f;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #4263ff, #9758ff);
+  color: #fff;
+  border-color: #526dff;
+}
+
+.btn:hover {
+  box-shadow: 4px 4px 0 #526dff;
+}
+
+.photo::before {
+  background: linear-gradient(145deg, #526dff, #9b5cff);
+  border-color: #526dff;
+}
+
+.photo::after {
+  background: #e879f9;
+  border-color: #e879f9;
+}
+
+.frame {
+  background: #111a33;
+  border-color: #526dff;
+}
+
+.sticker {
+  background: #111a33;
+  color: #eaf0ff;
+  border-color: #526dff;
+  box-shadow: 4px 4px 0 rgba(82, 109, 255, .35);
+}
+
+.sticker.b {
+  background: #ffd166;
+  color: #111827;
+  border-color: #ffd166;
+}
+
+.sticker small {
+  color: #a4b3d4;
+}
+
+.marquee {
+  background: #111a33;
+  color: #eaf0ff;
+  border-color: #34466f;
+}
+
+.track span::after {
+  color: #e879f9;
+}
+
+.group {
+  background: #111a33;
+  border-color: #34466f;
+  box-shadow: 4px 4px 0 rgba(82, 109, 255, .20);
+}
+
+.group:nth-child(1) {
+  background: #111b3b;
+}
+
+.group:nth-child(2) {
+  background: #20203b;
+}
+
+.group:nth-child(3) {
+  background: #291b3b;
+}
+
+.chip {
+  background: #080d20;
+  border-color: #34466f;
+}
+
+.project {
+  background: #0e1630;
+  border-color: #34466f;
+  box-shadow: 5px 5px 0 rgba(82, 109, 255, .25);
+}
+
+.project:hover {
+  box-shadow: 8px 8px 0 #526dff;
+}
+
+.preview {
+  background: linear-gradient(145deg, #152b66, #293f9b);
+  padding: 28px;
+}
+
+.preview.alt {
+  background: linear-gradient(145deg, #32184d, #57266e);
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: 240px;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid #526dff;
+  border-radius: 12px;
+  background: #111a33;
+}
+
+.tag {
+  background: #ffd166;
+  color: #111827;
+  border-color: #ffd166;
+}
+
+.go {
+  color: #8da8ff;
+}
+
+.go:hover {
+  color: #e879f9;
+}
+
+.edu {
+  background: #111a33;
+  border: 1px solid #34466f;
+}
+
+.edu p {
+  color: #a4b3d4;
+}
+
+.contact {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(232, 121, 249, .18), transparent 30%),
+    linear-gradient(135deg, #111a33, #172b60);
+  border-top: 1px solid #34466f;
+}
+
+.contact p {
+  color: #c2ccef;
+}
+
+.contact .btn {
+  background: #111a33;
+  color: #eaf0ff;
+  border-color: #526dff;
+  box-shadow: 4px 4px 0 rgba(82, 109, 255, .25);
+}
+
+.contact .btn.primary {
+  background: #ffd166;
+  color: #111827;
+  border-color: #ffd166;
+}
+
+footer {
+  background: #050918;
+  color: #8e9fc6;
+  border-top: 1px solid #25345c;
+}
+
+::selection {
+  background: #526dff;
+  color: #fff;
+}
+
+/* Keep the project screenshot framed with a boundary */
+.preview {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.project-image {
+  min-height: 220px;
+}
+
+/* Mobile-friendly screenshot sizing */
+@media (max-width: 860px) {
+  .project-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 560px) {
+  .preview {
+    padding: 18px;
+  }
+
+  .project-image {
+    height: 190px;
+    min-height: 190px;
+  }
+}
+
+.contact .links .btn {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  border-radius: 15px;
+}
+
+.contact .links .btn:hover {
+  transform: translateY(-4px);
+}
+
+.contact .links .btn i {
+  line-height: 1;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a href="#top" class="logo">
+        <i>PS</i>
+        <span>Pushkar S. Bharadwaj</span>
+      </a>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero-bg">
+    <div class="wrap hero">
+
+      <div>
+        <span class="pill">
+          <b></b>
+          Open to learning and collaborating
+        </span>
+
+        <h1>Hi, I'm Pushkar. I build things for the <em>web.</em></h1>
+
+        <p class="lead">
+          I'm a B.Tech Computer Science student learning by shipping small,
+          working projects in HTML, CSS, C and Python.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="photo">
+        <div class="frame">
+          <!-- Keep pushkar_photo.jpeg in the same folder as index.html -->
+          <img
+            src="images/pushkar.jpg"
+            alt="Portrait of Pushkar Singh Bharadwaj"
+            onerror="this.style.display='none'"
+          >
+        </div>
+
+        <div class="sticker a">
+          B.Tech CSIT
+          <small>batch of 2029</small>
+        </div>
+
+        <div class="sticker b">Greater Noida, India</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Moving skills banner -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>C</span>
+      <span>Python</span>
+      <span>Data Structures</span>
+      <span>Git &amp; GitHub</span>
+      <span>Problem Solving</span>
+      <span>Responsive Design</span>
+
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>C</span>
+      <span>Python</span>
+      <span>Data Structures</span>
+      <span>Git &amp; GitHub</span>
+      <span>Problem Solving</span>
+      <span>Responsive Design</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap split about">
+
+      <h2>Learning by building things that work.</h2>
+
+      <div>
+        <p>
+          I'm a <strong>Computer Science and Information Technology student</strong>
+          interested in software development, programming and modern web technologies.
+        </p>
+
+        <p>
+          I like turning concepts into practical projects. Right now I'm focused on
+          <strong>C, Python, HTML, CSS, data structures and Git</strong>.
+        </p>
+
+        <div class="facts">
+          <div class="fact">
+            <b>4</b>
+            <span>Languages and markup</span>
+          </div>
+
+          <div class="fact">
+            <b>2</b>
+            <span>Projects built</span>
+          </div>
+
+          <div class="fact">
+            <b>2025</b>
+            <span>Started B.Tech</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" style="padding-top:0">
+    <div class="wrap">
+
+      <h2>What I work with.</h2>
+
+      <div class="skills">
+
+        <div class="group">
+          <h3>Web</h3>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">Responsive design</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <h3>Programming</h3>
+          <div class="chips">
+            <span class="chip">C</span>
+            <span class="chip">Python</span>
+            <span class="chip">Data structures</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <h3>Tools and habits</h3>
+          <div class="chips">
+            <span class="chip">Git and GitHub</span>
+            <span class="chip">Problem solving</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" style="padding-top:0">
+    <div class="wrap">
+
+      <h2>Some things I've built.</h2>
+
+      <div class="projects">
+
+        <!-- Project 1: Book Store -->
+        <div class="project">
+
+          
+          <div class="preview">
+           <img
+            class="project-image"
+            src="images/book-store.png"
+            alt="Screenshot of the CSE Book Store website"
+           >
+          </div>
+
+          <div class="info">
+
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+
+            <h3>CSE Book Store</h3>
+
+            <p>
+              An online bookstore interface for Computer Science students,
+              with a catalogue, login and cart pages.
+            </p>
+
+            <div class="project-links">
+
+              <a
+                class="go"
+                href="https://book-store-52rl.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View live site ↗
+              </a>
+
+              <a
+                class="go"
+                href="https://github.com/PUSHKAR-SINGH-BHARADWAJ/BOOK-STORE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GitHub ↗
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Personal Portfolio -->
+        <div class="project">
+
+          <div class="preview">
+           <img
+            class="project-image"
+            src="images/portfolio.png"
+            alt="Screenshot of the portfolio"
+           >
+          </div>
+
+          <div class="info">
+
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+
+            <h3>Personal Portfolio</h3>
+
+            <p>
+              A responsive portfolio that shows my work, skills and
+              development journey. You're looking at it.
+            </p>
+
+            <div class="project-links">
+
+             <a
+              class="go"
+              href="YOUR_PORTFOLIO_VERCEL_URL"
+              target="_blank"
+              rel="noopener noreferrer">
+              View live site ↗
+            </a>
+
+            <a
+             class="go"
+             href="https://github.com/PUSHKAR-SINGH-BHARADWAJ/PORTFOLIO."
+             target="_blank"
+             rel="noopener noreferrer"
+             >
+             View GitHub ↗
+             </a>
+
+         </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education -->
+      <div class="edu">
+
+        <div class="when">2025 to now</div>
+
+        <div>
+          <h3>B.Tech in Computer Science Engineering</h3>
+          <p>
+            G.L. Bajaj Institute of Technology and Management,
+            Greater Noida, India
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+
+      <h2>Have an idea? Let's build it.</h2>
+
+      <p>
+        Send me a message about a project, an internship,
+        or something you'd like to learn together.
+      </p>
+
+      <div class="links">
+        
+       <a
+         class="btn primary"
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=pushkarsinghbharadwaj1@gmail.com"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Email me"
+         title="Email"
+        >
+        <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a
+          class="btn"
+          href="https://github.com/PUSHKAR-SINGH-BHARADWAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+          title="GitHub"
+         >
+         <i class="fa-brands fa-github"></i>
+         </a>
+
+         <a
+          class="btn"
+          href="https://www.linkedin.com/in/pushkar-singh-bharadwaj-549a58411/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
+          title="LinkedIn"
+          >
+          <i class="fa-brands fa-linkedin-in"></i>
+          </a>    
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Pushkar Singh Bharadwaj</div>
+</footer>
+
+</body>
+</html>
